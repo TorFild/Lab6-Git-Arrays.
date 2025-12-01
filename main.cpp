@@ -26,25 +26,25 @@ int main()
     }
     cout << " ]" << endl;
 
-    double sumNeg = 0, sumPos = 0;
-    int countNeg = 0, countPos = 0;
+   double sumNeg = 0, sumPos = 0;
+int countNeg = 0, countPos = 0;
 
-    for (int i = 0; i < SIZE; i++)
+for (int i = 0; i < SIZE; i++)
+{
+    if (A[i] < 0)
     {
-        if (A[i] < 0)
-        {
-            sumNeg += A[i];
-            countNeg++;
-        }
-        else if (A[i] > 0)
-        {
-            sumPos += A[i];
-            countPos++;
-        }
+        sumNeg += A[i];
+        countNeg++;
     }
+    else if (A[i] > 0)
+    {
+        sumPos += A[i];
+        countPos++;
+    }
+}
 
-    double mean_negative = (countNeg > 0) ? sumNeg / countNeg : 1;
-    double mean_positive = (countPos > 0) ? sumPos / countPos : 0;
+double mean_negative = (countNeg > 0) ? sumNeg / countNeg : 1;
+double mean_positive = (countPos > 0) ? sumPos / countPos : 0;
 
     bool allNeg = true, allPos = true;
 
