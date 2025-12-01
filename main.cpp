@@ -78,14 +78,14 @@ int main()
     }
 
     cout << "Перетворений масив: [ ";
-    for (int i = 0; i < SIZE; i++)
-    {
-        cout << A[i] << (i < SIZE - 1 ? ", " : "");
-    }
-    cout << " ]" << endl;
+for (int i = 0; i < SIZE; i++)
+{
+    cout << A[i] << (i < SIZE - 1 ? ", " : "");
+}
+cout << " ]" << endl;
 
-    cout << "mean_negative = " << mean_negative << endl;
-    cout << "mean_positive = " << mean_positive << endl;
+cout << "mean_negative = " << mean_negative << endl;
+cout << "mean_positive = " << mean_positive << endl;
 
     return 0;
 }
