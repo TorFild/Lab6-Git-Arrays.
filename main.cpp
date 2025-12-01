@@ -10,21 +10,24 @@ int main()
     SetConsoleOutputCP(65001);
     SetConsoleCP(65001);
     const int SIZE = 14;
-    double A[SIZE];
+double A[SIZE];
 
-    srand(time(0));
+srand(time(0));
 
-    for (int i = 0; i < SIZE; i++)
-    {
-        A[i] = -20 + rand() % 41;
-    }
+// 1. Генерація початкового масиву
+for (int i = 0; i < SIZE; i++)
+{
+    A[i] = -20 + rand() % 41;
+}
 
-    cout << "Початковий масив: [ ";
-    for (int i = 0; i < SIZE; i++)
-    {
-        cout << A[i] << (i < SIZE - 1 ? ", " : "");
-    }
-    cout << " ]" << endl;
+// Виведення початкового масиву
+cout << "Початковий масив: [ ";
+for (int i = 0; i < SIZE; i++)
+{
+    cout << A[i] << (i < SIZE - 1 ? ", " : "");
+}
+cout << " ]" << endl;
+
 
     double sumNeg = 0, sumPos = 0;
     int countNeg = 0, countPos = 0;
