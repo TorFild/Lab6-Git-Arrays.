@@ -100,7 +100,7 @@ int main()
     cout << " ]" << endl;
 
     cout << "mean_negative = " << mean_negative << endl;
-    cout << "mean_positive = " << mean_positive << endl;
+    cout << "mean_positive = " << mean_positive << endl; 
 
     return 0;
 }
