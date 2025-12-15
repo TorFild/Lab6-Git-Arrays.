@@ -7,12 +7,13 @@ using namespace std;
 
 int main()
 {
-  
+
+
 
     SetConsoleOutputCP(65001);
     SetConsoleCP(65001);
 
-
+    
     // 1. Введення та ініціалізація даних
 
     const int SIZE = 14;
