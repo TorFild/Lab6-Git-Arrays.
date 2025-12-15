@@ -2,32 +2,38 @@
 #include <windows.h>
 #include <ctime>
 #include <cstdlib>
+
 using namespace std;
 
 int main()
 {
+  
 
     SetConsoleOutputCP(65001);
     SetConsoleCP(65001);
+
+    
+    // 1. Введення та ініціалізація даних
+
     const int SIZE = 14;
-double A[SIZE];
+    double A[SIZE];
 
-srand(time(0));
+    srand(time(0));
 
-// 1. Генерація початкового масиву
-for (int i = 0; i < SIZE; i++)
-{
-    A[i] = -20 + rand() % 41;
-}
+    for (int i = 0; i < SIZE; i++)
+    {
+        A[i] = -20 + rand() % 41;
+    }
 
-// Виведення початкового масиву
-cout << "Початковий масив: [ ";
-for (int i = 0; i < SIZE; i++)
-{
-    cout << A[i] << (i < SIZE - 1 ? ", " : "");
-}
-cout << " ]" << endl;
+    cout << "Початковий масив: [ ";
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << A[i] << (i < SIZE - 1 ? ", " : "");
+    }
+    cout << " ]" << endl;
 
+    
+    // 2. Аналітична обробка масиву
 
     double sumNeg = 0, sumPos = 0;
     int countNeg = 0, countPos = 0;
@@ -48,6 +54,9 @@ cout << " ]" << endl;
 
     double mean_negative = (countNeg > 0) ? sumNeg / countNeg : 1;
     double mean_positive = (countPos > 0) ? sumPos / countPos : 0;
+
+    
+    // 3. Логічна обробка масиву
 
     bool allNeg = true, allPos = true;
 
@@ -80,6 +89,9 @@ cout << " ]" << endl;
         }
     }
 
+    
+    // 4. Виведення результатів та перевірка
+    
     cout << "Перетворений масив: [ ";
     for (int i = 0; i < SIZE; i++)
     {
